@@ -17,7 +17,7 @@ import optparse
 
 def convert(num):
     weight = float(num/1000)
-    print( u'The Weight is : %s KG' %weight)
+    print(u'The Weight is : %s KG' % weight)
 
 
 def main():
