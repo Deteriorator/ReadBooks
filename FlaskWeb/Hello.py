@@ -7,13 +7,13 @@
    date：          2018/8/4
 -------------------------------------------------
    Change Activity:
-                   2018/8/4:
+                   2018/8/9:
 -------------------------------------------------
 """
 __author__ = 'Liangz'
 
 from flask import Flask, render_template
-from flask.ext.bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
