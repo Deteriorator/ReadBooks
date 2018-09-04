@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     Hypotenuse
+   File Name：     HypotenusePy3
    Description :   已知直角三角形两直角边，求斜边
    Author :        Liangz
    date：          2018/8/3
 -------------------------------------------------
    Change Activity:
-                   2018/8/3:
+                   2018/9/4:
 -------------------------------------------------
 """
 __author__ = 'Liangz'
@@ -22,7 +22,7 @@ def hypotenuse(a, b):
 
 
 def main():
-    parse = optparse.OptionParser(u'使用方法 python WeightConvert.py -a <num1> -b <num2>')
+    parse = optparse.OptionParser(u'使用方法 python WeightConvertPy3.py -a <num1> -b <num2>')
     parse.add_option('-a', dest='Leg1', type='float', help=u'直角边长度')
     parse.add_option('-b', dest='Leg2', type='float', help=u'直角边长度')
     (options, args) = parse.parse_args()
