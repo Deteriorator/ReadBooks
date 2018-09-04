@@ -2,7 +2,7 @@
 """
 -------------------------------------------------
    File Name：     MultiplicationTablePy3
-   Description :   使用Python实现乘法表
+   Description :   使用Python实现9x9乘法表
    Author :        Liangz
    date：          2018/8/4
 -------------------------------------------------
