@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     EvenNumber
+   File Name：     EvenNumberPy3
    Description :
    Author :        Liangz
    date：          2018/8/4
 -------------------------------------------------
    Change Activity:
-                   2018/8/4:
+                   2018/9/4:
 -------------------------------------------------
 """
 __author__ = 'Liangz'
@@ -24,7 +24,7 @@ def even(num):
 
 
 def main():
-    parse = optparse.OptionParser(u'使用方法 python EvenNumber.py -n <num>')
+    parse = optparse.OptionParser(u'使用方法 python EvenNumberPy3.py -n <num>')
     parse.add_option('-n', dest='num', type='int', help=u'范围1-num')
     (options, args) = parse.parse_args()
     num = options.num
