@@ -21,7 +21,7 @@ def convert(num):
 
 
 def main():
-    parse = optparse.OptionParser(u'使用方法 python WeightConvert.py -w <num>')
+    parse = optparse.OptionParser(u'使用方法 python WeightConvertPy3.py -w <num>')
     parse.add_option('-w', dest='weight', type='float', help=u'多少克')
     (options, args) = parse.parse_args()
     weight = options.weight
