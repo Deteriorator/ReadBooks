@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     MultiplicationTable
+   File Name：     MultiplicationTablePy3
    Description :   使用Python实现乘法表
    Author :        Liangz
    date：          2018/8/4
 -------------------------------------------------
    Change Activity:
-                   2018/8/4:
+                   2018/9/4:
 -------------------------------------------------
 """
 __author__ = 'Liangz'

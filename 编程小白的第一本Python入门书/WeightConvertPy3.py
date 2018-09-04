@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     WeightConvert
+   File Name：     WeightConvertPy3
    Description :   重量单位换算
    Author :        Liangz
    date：          2018/8/3
 -------------------------------------------------
    Change Activity:
-                   2018/8/3:
+                   2018/9/4:
 -------------------------------------------------
 """
 __author__ = 'Liangz'
@@ -16,7 +16,7 @@ import optparse
 
 
 def convert(num):
-    weight = float(num/1000)
+    weight = float(num)/1000
     print(u'The Weight is : %s KG' % weight)
 
 
