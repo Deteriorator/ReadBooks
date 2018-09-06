@@ -1,4 +1,4 @@
-# ReadBooks
+**本项目在Python3.6版本运行**
 
 #### 《编程小白的第一本Python入门书》
 * 重量单位转换 [Python 3.6版本](编程小白的第一本Python入门书/WeightConvertPy3.py)
