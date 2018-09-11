@@ -10,6 +10,7 @@
 * 猜大小 [Python 3.6版本](编程小白的第一本Python入门书/GuessTheSizePy3.py)
 * 赌钱小游戏 [Python 3.6版本](编程小白的第一本Python入门书/BetGamePy3.py)
 * 伪手机验证码 [Python 3.6版本](编程小白的第一本Python入门书/PhoneNumVerificationPy3.py)
+* 词频统计 [Python 3.6版本](编程小白的第一本Python入门书/WordFrequency/WordFrequencyPy3.py)
 
 #### 《FlaskWeb开发：基于Python的Web应用开发实战》
 
