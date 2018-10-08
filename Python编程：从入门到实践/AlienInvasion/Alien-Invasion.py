@@ -14,8 +14,10 @@ __author__ = 'Liangz'
 
 import sys
 import pygame
-from ship import Ship
-from settings import Settings
+from Ship import Ship
+from Settings import Settings
+import GameFunctions
+
 
 def run_game():
     # 初始化Pygame、设置和屏幕对象
@@ -36,15 +38,18 @@ def run_game():
     while True :
 
         # 监控键盘和鼠标事件
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
+        # for event in pygame.event.get():
+        #     if event.type == pygame.QUIT:
+        #         sys.exit()
+        GameFunctions.chech_events()
 
         # 每次循环时都重回屏幕
-        screen.fill(game_settings.bg_color)
-        ship.blitme()
+        # screen.fill(game_settings.bg_color)
+        # ship.blitme()
+        #
+        # # 让最近绘制的屏幕可见
+        # pygame.display.flip()
 
-        # 让最近绘制的屏幕可见
-        pygame.display.flip()
+        GameFunctions.update_screen(game_settings, screen, ship)
 
 run_game()
