@@ -41,7 +41,7 @@ def run_game():
         # for event in pygame.event.get():
         #     if event.type == pygame.QUIT:
         #         sys.exit()
-        GameFunctions.chech_events()
+        GameFunctions.chech_events(ship)
 
         # 每次循环时都重回屏幕
         # screen.fill(game_settings.bg_color)
