@@ -43,6 +43,8 @@ def run_game():
         #         sys.exit()
         GameFunctions.chech_events(ship)
 
+        ship.update()
+
         # 每次循环时都重回屏幕
         # screen.fill(game_settings.bg_color)
         # ship.blitme()
