@@ -17,7 +17,7 @@ import pygame
 from Ship import Ship
 from Settings import Settings
 import GameFunctions
-
+from pygame.sprite import Group
 
 def run_game():
     # 初始化Pygame、设置和屏幕对象
@@ -34,6 +34,9 @@ def run_game():
     # 创建一艘飞船
     ship = Ship(game_settings, screen)
 
+    # 创建一个用于存储子弹的编组
+    bullets = Group()
+
     # 开始游戏主循环
     while True :
 
@@ -41,7 +44,7 @@ def run_game():
         # for event in pygame.event.get():
         #     if event.type == pygame.QUIT:
         #         sys.exit()
-        GameFunctions.chech_events(ship)
+        GameFunctions.chech_events(game_settings, screen, ship, bullets)
 
         ship.update()
 
@@ -52,6 +55,7 @@ def run_game():
         # # 让最近绘制的屏幕可见
         # pygame.display.flip()
 
-        GameFunctions.update_screen(game_settings, screen, ship)
+        bullets.update()
+        GameFunctions.update_screen(game_settings, screen, ship, bullets)
 
 run_game()
