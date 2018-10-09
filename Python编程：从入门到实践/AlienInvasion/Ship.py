@@ -34,7 +34,6 @@ class Ship():
         # 在飞船的属性center中存储小数值
         self.center = float(self.rect.centerx)
 
-
         # 移动标志
         self.moving_right = False
         self.moving_left = False
@@ -42,11 +41,11 @@ class Ship():
     def update(self):
         """根据移动标志调整飞船的位置"""
         # 更新飞船的center值，而不是rect
-        if self.moving_right:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             # self.rect.centerx += 1
             self.center += self.game_settings.ship_speed_factor
 
-        if self.moving_left :
+        if self.moving_left and self.rect.left > 0:
             # self.rect.centerx -= 1
             self.center -= self.game_settings.ship_speed_factor
 
