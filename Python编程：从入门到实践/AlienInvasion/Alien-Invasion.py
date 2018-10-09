@@ -56,6 +56,13 @@ def run_game():
         # pygame.display.flip()
 
         bullets.update()
+
+        # 删除已消失的子弹
+        for bullet in bullets.copy():
+            if bullet.rect.bottom <= 0:
+                bullets.remove(bullet)
+        # print(len(bullets))
+
         GameFunctions.update_screen(game_settings, screen, ship, bullets)
 
 run_game()
