@@ -15,6 +15,7 @@ __author__ = 'Liangz'
 import sys
 import pygame
 from Ship import Ship
+from Alien import Alien
 from Settings import Settings
 import GameFunctions
 from pygame.sprite import Group
@@ -33,6 +34,9 @@ def run_game():
 
     # 创建一艘飞船
     ship = Ship(game_settings, screen)
+
+    # 创建一个外星人
+    alien = Alien(game_settings, screen)
 
     # 创建一个用于存储子弹的编组
     bullets = Group()
@@ -65,6 +69,6 @@ def run_game():
 
         GameFunctions.update_bullets(bullets)
 
-        GameFunctions.update_screen(game_settings, screen, ship, bullets)
+        GameFunctions.update_screen(game_settings, screen, ship, alien, bullets)
 
 run_game()
