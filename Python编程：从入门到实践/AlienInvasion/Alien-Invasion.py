@@ -55,13 +55,15 @@ def run_game():
         # # 让最近绘制的屏幕可见
         # pygame.display.flip()
 
-        bullets.update()
+        # bullets.update()
 
         # 删除已消失的子弹
-        for bullet in bullets.copy():
-            if bullet.rect.bottom <= 0:
-                bullets.remove(bullet)
+        # for bullet in bullets.copy():
+        #     if bullet.rect.bottom <= 0:
+        #         bullets.remove(bullet)
         # print(len(bullets))
+
+        GameFunctions.update_bullets(bullets)
 
         GameFunctions.update_screen(game_settings, screen, ship, bullets)
 
