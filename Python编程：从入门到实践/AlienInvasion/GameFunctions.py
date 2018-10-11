@@ -142,3 +142,6 @@ def get_number_rows(game_settings, ship_height, alien_height):
     return number_rows
 
 
+def update_aliens(aliens):
+    """更新外星人群中所有外星人的位置"""
+    aliens.update()
