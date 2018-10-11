@@ -19,6 +19,8 @@ from Ship import Ship
 from Settings import Settings
 import GameFunctions
 from pygame.sprite import Group
+from GameStatus import GameStatus
+
 
 def run_game():
     # 初始化Pygame、设置和屏幕对象
@@ -28,6 +30,9 @@ def run_game():
     screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
+
+    # 创建一个用于存储游戏统计信息的实例
+    status = GameStatus(game_settings)
 
     # 设置背景色
     # bg_color = (230,230,230)
@@ -74,7 +79,7 @@ def run_game():
         # print(len(bullets))
 
         GameFunctions.update_bullets(game_settings, screen, ship, aliens, bullets)
-        GameFunctions.update_aliens(game_settings, aliens)
+        GameFunctions.update_aliens(game_settings, status, screen, ship, aliens, bullets)
         GameFunctions.update_screen(game_settings, screen, ship, aliens, bullets)
 
 run_game()
