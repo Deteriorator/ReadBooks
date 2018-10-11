@@ -142,6 +142,22 @@ def get_number_rows(game_settings, ship_height, alien_height):
     return number_rows
 
 
-def update_aliens(aliens):
+def update_aliens(game_settings, aliens):
     """更新外星人群中所有外星人的位置"""
+    check_fleet_edges(game_settings, aliens)
     aliens.update()
+
+def check_fleet_edges(game_settings, aliens):
+    """有外星人到达边缘时采取相应的措施"""
+    for alien in aliens.sprites():
+        if alien.check_edges():
+            change_fleet_direction(game_settings, aliens)
+            break
+
+
+def change_fleet_direction(game_settings, aliens):
+    """将整体外星人下移，并改变它们的方向"""
+    for alien in aliens.sprites():
+        alien.rect.y += game_settings.fleet_drop_speed
+    game_settings.fleet_direction *= -1
+
