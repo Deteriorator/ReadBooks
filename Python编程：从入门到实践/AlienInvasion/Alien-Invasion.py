@@ -73,7 +73,7 @@ def run_game():
         #         bullets.remove(bullet)
         # print(len(bullets))
 
-        GameFunctions.update_bullets(bullets)
+        GameFunctions.update_bullets(aliens, bullets)
         GameFunctions.update_aliens(game_settings, aliens)
         GameFunctions.update_screen(game_settings, screen, ship, aliens, bullets)
 
