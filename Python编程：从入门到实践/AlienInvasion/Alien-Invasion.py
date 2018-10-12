@@ -61,25 +61,26 @@ def run_game():
         #         sys.exit()
         GameFunctions.chech_events(game_settings, screen, ship, bullets)
 
-        ship.update()
+        if status.game_active:
+            ship.update()
 
-        # 每次循环时都重回屏幕
-        # screen.fill(game_settings.bg_color)
-        # ship.blitme()
-        #
-        # # 让最近绘制的屏幕可见
-        # pygame.display.flip()
+            # 每次循环时都重回屏幕
+            # screen.fill(game_settings.bg_color)
+            # ship.blitme()
+            #
+            # # 让最近绘制的屏幕可见
+            # pygame.display.flip()
 
-        # bullets.update()
+            # bullets.update()
 
-        # 删除已消失的子弹
-        # for bullet in bullets.copy():
-        #     if bullet.rect.bottom <= 0:
-        #         bullets.remove(bullet)
-        # print(len(bullets))
+            # 删除已消失的子弹
+            # for bullet in bullets.copy():
+            #     if bullet.rect.bottom <= 0:
+            #         bullets.remove(bullet)
+            # print(len(bullets))
 
-        GameFunctions.update_bullets(game_settings, screen, ship, aliens, bullets)
-        GameFunctions.update_aliens(game_settings, status, screen, ship, aliens, bullets)
+            GameFunctions.update_bullets(game_settings, screen, ship, aliens, bullets)
+            GameFunctions.update_aliens(game_settings, status, screen, ship, aliens, bullets)
         GameFunctions.update_screen(game_settings, screen, ship, aliens, bullets)
 
 run_game()
