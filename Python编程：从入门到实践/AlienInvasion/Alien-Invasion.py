@@ -20,6 +20,7 @@ from Settings import Settings
 import GameFunctions
 from pygame.sprite import Group
 from GameStatus import GameStatus
+from Button import Button
 
 
 def run_game():
@@ -30,6 +31,9 @@ def run_game():
     screen = pygame.display.set_mode((game_settings.screen_width, game_settings.screen_height))
 
     pygame.display.set_caption("Alien Invasion")
+
+    # 创建Play按钮
+    play_button = Button(game_settings, screen, "Play")
 
     # 创建一个用于存储游戏统计信息的实例
     status = GameStatus(game_settings)
@@ -81,6 +85,6 @@ def run_game():
 
             GameFunctions.update_bullets(game_settings, screen, ship, aliens, bullets)
             GameFunctions.update_aliens(game_settings, status, screen, ship, aliens, bullets)
-        GameFunctions.update_screen(game_settings, screen, ship, aliens, bullets)
+        GameFunctions.update_screen(game_settings, screen, status, ship, aliens, bullets, play_button)
 
 run_game()
