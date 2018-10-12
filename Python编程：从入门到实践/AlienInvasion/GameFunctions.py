@@ -38,6 +38,7 @@ def check_keydown_events(event, game_settings, screen, ship, bullets):
     elif event.key == pygame.K_q:
         sys.exit()
 
+
 def check_keyup_events(event, ship):
     """响应松开"""
     if event.key == pygame.K_RIGHT:
@@ -46,7 +47,7 @@ def check_keyup_events(event, ship):
         ship.moving_left = False
 
 
-def chech_events(game_settings, screen, ship, bullets):
+def chech_events(game_settings, screen, status, play_button, ship, bullets):
     """响应按键和鼠标事件"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -67,6 +68,16 @@ def chech_events(game_settings, screen, ship, bullets):
             # elif event.key == pygame.K_LEFT:
             #     ship.moving_left = False
             check_keyup_events(event, ship)
+
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            check_play_button(status, play_button, mouse_x, mouse_y)
+
+
+def check_play_button(status, play_button, mouse_x, mouse_y):
+    """在玩家单击Play按钮是开始新游戏"""
+    if play_button.rect.collidepoint(mouse_x, mouse_y):
+        status.game_active = True
 
 
 def update_screen(game_settings, screen, status, ship, aliens, bullets, play_button):
