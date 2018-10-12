@@ -63,7 +63,7 @@ def run_game():
         # for event in pygame.event.get():
         #     if event.type == pygame.QUIT:
         #         sys.exit()
-        GameFunctions.chech_events(game_settings, screen, ship, bullets)
+        GameFunctions.chech_events(game_settings, screen, status, play_button, ship, bullets)
 
         if status.game_active:
             ship.update()
