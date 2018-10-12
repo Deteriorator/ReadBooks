@@ -166,6 +166,17 @@ def update_aliens(game_settings, status, screen, ship, aliens, bullets):
         # print("Ship Hit !!!")
         ship_hit(game_settings, status, screen, ship, aliens, bullets)
 
+
+def check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets):
+    """检查是否有外形人到达屏幕底端"""
+    screen_rect = screen.get_rect()
+    for alien in aliens.sprites():
+        if alien.rect.bottom >= screen_rect.bottom:
+            ship_hit(game_settings, status, screen, ship, aliens, bullets)
+            break
+
+    check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets)
+
 def check_fleet_edges(game_settings, aliens):
     """有外星人到达边缘时采取相应的措施"""
     for alien in aliens.sprites():
