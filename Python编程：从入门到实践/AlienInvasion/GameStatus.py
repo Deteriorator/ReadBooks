@@ -22,6 +22,7 @@ class GameStatus():
         """初始化统计信息"""
         self.game_settings = game_settings
         self.reset_status()
+        self.game_active = True
 
     def reset_status(self):
         """初始化在游戏运行期间可能变化的统计信息"""
