@@ -47,7 +47,7 @@ def check_keyup_events(event, ship):
         ship.moving_left = False
 
 
-def chech_events(game_settings, screen, status, play_button, ship, bullets):
+def chech_events(game_settings, screen, status, play_button, ship, aliens, bullets):
     """响应按键和鼠标事件"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -71,13 +71,22 @@ def chech_events(game_settings, screen, status, play_button, ship, bullets):
 
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
-            check_play_button(status, play_button, mouse_x, mouse_y)
+            check_play_button(game_settings, screen, status, play_button, ship, aliens, bullets, mouse_x, mouse_y)
 
 
-def check_play_button(status, play_button, mouse_x, mouse_y):
+def check_play_button(game_settings, screen, status, play_button, ship, aliens, bullets,mouse_x, mouse_y):
     """在玩家单击Play按钮是开始新游戏"""
     if play_button.rect.collidepoint(mouse_x, mouse_y):
+        status.reset_status()
         status.game_active = True
+
+        # 清空外星人列表和子弹列表
+        aliens.empty()
+        bullets.empty()
+
+        # 创建一群新的外星人，并让飞船居中
+        create_fleet(game_settings, screen, ship, aliens)
+        ship.center_ship()
 
 
 def update_screen(game_settings, screen, status, ship, aliens, bullets, play_button):
@@ -191,6 +200,7 @@ def check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets):
             break
 
     check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets)
+
 
 def check_fleet_edges(game_settings, aliens):
     """有外星人到达边缘时采取相应的措施"""
