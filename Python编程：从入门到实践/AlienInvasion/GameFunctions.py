@@ -78,6 +78,9 @@ def check_play_button(game_settings, screen, status, play_button, ship, aliens, 
     """在玩家单击Play按钮是开始新游戏"""
     button_clicked = play_button.rect.collidepoint(mouse_x, mouse_y)
     if button_clicked and not status.game_active:
+        # 重置游戏设置
+        game_settings.initialize_dynamic_settings()
+
         # 隐藏光标
         pygame.mouse.set_visible(False)
 
