@@ -132,8 +132,9 @@ def check_bullet_alien_collisions(game_settings, screen, ship, aliens, bullets):
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
 
     if len(aliens) == 0:
-        # 删除现有的子弹并新建一群外星人
+        # 删除现有的子弹,加快游戏节奏并新建一群外星人
         bullets.empty()
+        game_settings.increase_speed()
         create_fleet(game_settings, screen, ship, aliens)
 
 
@@ -240,4 +241,3 @@ def ship_hit(game_settings, status, screen, ship, aliens, bullets):
     else:
         status.game_active = False
         pygame.mouse.set_visible(True)
-        
