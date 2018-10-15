@@ -76,7 +76,8 @@ def chech_events(game_settings, screen, status, play_button, ship, aliens, bulle
 
 def check_play_button(game_settings, screen, status, play_button, ship, aliens, bullets,mouse_x, mouse_y):
     """在玩家单击Play按钮是开始新游戏"""
-    if play_button.rect.collidepoint(mouse_x, mouse_y):
+    button_clicked = play_button.rect.collidepoint(mouse_x, mouse_y)
+    if button_clicked and not status.game_active:
         status.reset_status()
         status.game_active = True
 
