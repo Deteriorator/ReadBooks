@@ -34,4 +34,14 @@ class ScoreBoard():
     def prep_score(self):
         """将得放装换为一幅渲染的图像"""
         score_str = str(self.status.score)
+        self.score_image = self.font.render(score_str, True, self.text_color, self.game_settings.bg_color)
+
+        # 将得分放在屏幕右上角
+        self.score_rect = self.score_image.get_rect()
+        self.score_rect.right = self.screen_rect.right - 20
+        self.score_rect.top = 20
+
+    def show_score(self):
+        """在屏幕上显示得分"""
+        self.screen.blit(self.score_image, self.score_rect)
 

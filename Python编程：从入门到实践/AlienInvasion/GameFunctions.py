@@ -96,7 +96,7 @@ def check_play_button(game_settings, screen, status, play_button, ship, aliens, 
         ship.center_ship()
 
 
-def update_screen(game_settings, screen, status, ship, aliens, bullets, play_button):
+def update_screen(game_settings, screen, status, scoreboard, ship, aliens, bullets, play_button):
     """更新屏幕上的图像，并切换到新屏幕"""
     # 每次循环时都重绘屏幕
     screen.fill(game_settings.bg_color)
@@ -107,6 +107,9 @@ def update_screen(game_settings, screen, status, ship, aliens, bullets, play_but
 
     ship.blitme()
     aliens.draw(screen)
+
+    # 显示得分
+    scoreboard.show_score()
 
     # 如果游戏处于非活动状态，就绘制Play按钮
     if not status.game_active:
