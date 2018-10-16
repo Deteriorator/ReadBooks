@@ -138,8 +138,9 @@ def check_bullet_alien_collisions(game_settings, screen, status, scoreboard, shi
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
 
     if collisions:
-        status.score += game_settings.aliens_points
-        scoreboard.prep_score()
+        for aliens in collisions.values():
+            status.score += game_settings.aliens_points * len(aliens)
+            scoreboard.prep_score()
 
     if len(aliens) == 0:
         # 删除现有的子弹,加快游戏节奏并新建一群外星人
