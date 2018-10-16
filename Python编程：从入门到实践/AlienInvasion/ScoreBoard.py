@@ -34,4 +34,4 @@ class ScoreBoard():
     def prep_score(self):
         """将得放装换为一幅渲染的图像"""
         score_str = str(self.status.score)
-        
+
