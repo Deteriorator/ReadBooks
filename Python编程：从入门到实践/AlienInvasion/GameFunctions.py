@@ -119,7 +119,7 @@ def update_screen(game_settings, screen, status, scoreboard, ship, aliens, bulle
     pygame.display.flip()
 
 
-def update_bullets(game_settings, screen, ship, aliens, bullets):
+def update_bullets(game_settings, screen, status, scoreboard, ship, aliens, bullets):
     """更新子弹的位置，并删除已消失的子弹"""
     # 更新子弹的位置
     bullets.update()
@@ -129,13 +129,17 @@ def update_bullets(game_settings, screen, ship, aliens, bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
 
-    check_bullet_alien_collisions(game_settings, screen, ship, aliens, bullets)
+    check_bullet_alien_collisions(game_settings, screen, status, scoreboard, ship, aliens, bullets)
 
 
-def check_bullet_alien_collisions(game_settings, screen, ship, aliens, bullets):
+def check_bullet_alien_collisions(game_settings, screen, status, scoreboard, ship, aliens, bullets):
     """相应子弹和外星人的碰撞"""
     # 删除发生碰撞的子弹和外星人
     collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
+
+    if collisions:
+        status.score += game_settings.aliens_points
+        scoreboard.prep_score()
 
     if len(aliens) == 0:
         # 删除现有的子弹,加快游戏节奏并新建一群外星人
