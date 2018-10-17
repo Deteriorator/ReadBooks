@@ -141,6 +141,7 @@ def check_bullet_alien_collisions(game_settings, screen, status, scoreboard, shi
         for aliens in collisions.values():
             status.score += game_settings.aliens_points * len(aliens)
             scoreboard.prep_score()
+        check_high_score(status, scoreboard)
 
     if len(aliens) == 0:
         # 删除现有的子弹,加快游戏节奏并新建一群外星人
@@ -231,6 +232,13 @@ def change_fleet_direction(game_settings, aliens):
     for alien in aliens.sprites():
         alien.rect.y += game_settings.fleet_drop_speed
     game_settings.fleet_direction *= -1
+
+
+def check_high_score(status, scoreboard):
+    """检查是否诞生了新的最高分"""
+    if status.score > status.high_score:
+        status.high_score = status.score
+        scoreboard.prep_high_score()
 
 
 def ship_hit(game_settings, status, screen, ship, aliens, bullets):
