@@ -86,6 +86,7 @@ def check_play_button(game_settings, screen, status, scoreboard, play_button, sh
         scoreboard.prep_score()
         scoreboard.prep_high_score()
         scoreboard.prep_level()
+        scoreboard.prep_ships()
 
         # 隐藏光标
         pygame.mouse.set_visible(False)
@@ -208,7 +209,7 @@ def get_number_rows(game_settings, ship_height, alien_height):
     return number_rows
 
 
-def update_aliens(game_settings, status, screen, ship, aliens, bullets):
+def update_aliens(game_settings, screen, status, scoreboard, ship, aliens, bullets):
     """更新外星人群中所有外星人的位置"""
     check_fleet_edges(game_settings, aliens)
     aliens.update()
@@ -216,18 +217,21 @@ def update_aliens(game_settings, status, screen, ship, aliens, bullets):
     # 检测外星人和飞船之间的碰撞
     if pygame.sprite.spritecollideany(ship, aliens):
         # print("Ship Hit !!!")
-        ship_hit(game_settings, status, screen, ship, aliens, bullets)
+        ship_hit(game_settings, screen, status, scoreboard, ship, aliens, bullets)
+
+    # 检查是否有外星人抵达屏幕底端
+    check_aliens_bottom(game_settings, screen, status, scoreboard, ship, aliens, bullets)
 
 
-def check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets):
+def check_aliens_bottom(game_settings, screen, status, scoreboard, ship, aliens, bullets):
     """检查是否有外形人到达屏幕底端"""
     screen_rect = screen.get_rect()
     for alien in aliens.sprites():
         if alien.rect.bottom >= screen_rect.bottom:
-            ship_hit(game_settings, status, screen, ship, aliens, bullets)
+            ship_hit(game_settings, screen, status, scoreboard, ship, aliens, bullets)
             break
 
-    check_aliens_bottom(game_settings, status, screen, ship, aliens, bullets)
+    check_aliens_bottom(game_settings, screen, status, scoreboard, ship, aliens, bullets)
 
 
 def check_fleet_edges(game_settings, aliens):
@@ -252,11 +256,14 @@ def check_high_score(status, scoreboard):
         scoreboard.prep_high_score()
 
 
-def ship_hit(game_settings, status, screen, ship, aliens, bullets):
+def ship_hit(game_settings, screen, status, scoreboard, ship, aliens, bullets):
     """响应被外星人撞到的飞船"""
     # 将ships_left减1
     if status.ships_left > 0:
         status.ships_left -= 1
+
+        # 更新记分牌
+        scoreboard.prep_ships()
 
         # 清空外星人列表和子弹列表
         aliens.empty()
