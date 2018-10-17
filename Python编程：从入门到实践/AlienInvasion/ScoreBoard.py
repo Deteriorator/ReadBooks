@@ -13,6 +13,9 @@
 __author__ = 'Liangz'
 
 import pygame.font
+from pygame.sprite import Group
+from Ship import Ship
+
 
 class ScoreBoard():
     """显示得分信息的类"""
@@ -32,6 +35,7 @@ class ScoreBoard():
         self.prep_score()
         self.prep_high_score()
         self.prep_level()
+        self.prep_ships()
 
     def prep_score(self):
         """将得放装换为一幅渲染的图像"""
@@ -49,6 +53,9 @@ class ScoreBoard():
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
         self.screen.blit(self.level_image, self.level_rect)
+
+        # 绘制飞船
+        self.ships.draw(self.screen)
 
     def prep_high_score(self):
         """将最高得分转换为渲染的图像"""
@@ -70,3 +77,11 @@ class ScoreBoard():
         self.level_rect.right = self.score_rect.right
         self.level_rect.top = self.score_rect.bottom + 10
 
+    def prep_ships(self):
+        """显示剩余的飞船数量"""
+        self.ships = Group()
+        for ship_number in range(self.status.ships_left):
+            ship = Ship(self.game_settings, self.screen)
+            ship.rect.x = 10 + ship_number * ship.rect.width
+            ship.rect.y = 10
+            self.ships.add(ship)
