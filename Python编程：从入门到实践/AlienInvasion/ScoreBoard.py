@@ -33,7 +33,8 @@ class ScoreBoard():
 
     def prep_score(self):
         """将得放装换为一幅渲染的图像"""
-        score_str = str(self.status.score)
+        rounded_score = int(round(self.status.score, -1))
+        score_str = "{:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True, self.text_color, self.game_settings.bg_color)
 
         # 将得分放在屏幕右上角
