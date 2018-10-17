@@ -14,11 +14,14 @@ __author__ = 'Liangz'
 
 
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+
+class Ship(Sprite):
 
     def __init__(self, game_settings, screen):
         """初始化飞船并设置其初始位置"""
+        super(Ship, self).__init__()
         self.screen = screen
         self.game_settings = game_settings
 
