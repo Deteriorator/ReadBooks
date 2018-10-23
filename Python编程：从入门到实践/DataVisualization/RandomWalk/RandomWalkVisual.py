@@ -22,7 +22,12 @@ while True:
     # 创建一个RandomWalk实例，并将其包含的点都绘制出来
     random_walk = RandomWalk()
     random_walk.fill_walk()
-    plt.scatter(random_walk.x_values, random_walk.y_values, s=15)
+    point_numbers = list(range(random_walk.num_points))
+    plt.scatter(random_walk.x_values, random_walk.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+
+    # 突出起点和终点
+    plt.scatter(0, 0, c='green', edgecolors='none', s=100)
+    plt.scatter(random_walk.x_values[-1], random_walk.y_values[-1], c='red', edgecolors='none', s=100)
     plt.show()
 
     keep_running = input("Make another walk?(y/n)")
