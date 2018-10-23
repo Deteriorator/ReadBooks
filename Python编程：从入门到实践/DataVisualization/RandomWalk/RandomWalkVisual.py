@@ -20,10 +20,10 @@ from RandomWalk import RandomWalk
 # 只要程序处于活动状态，就不断地模拟随机漫步
 while True:
     # 创建一个RandomWalk实例，并将其包含的点都绘制出来
-    random_walk = RandomWalk()
+    random_walk = RandomWalk(50000)
     random_walk.fill_walk()
     point_numbers = list(range(random_walk.num_points))
-    plt.scatter(random_walk.x_values, random_walk.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=15)
+    plt.scatter(random_walk.x_values, random_walk.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1)
 
     # 突出起点和终点
     plt.scatter(0, 0, c='green', edgecolors='none', s=100)
