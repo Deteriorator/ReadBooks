@@ -22,6 +22,10 @@ while True:
     # 创建一个RandomWalk实例，并将其包含的点都绘制出来
     random_walk = RandomWalk(50000)
     random_walk.fill_walk()
+
+    # 设置绘图窗口的尺寸
+    plt.figure(dpi=128, figsize=(10, 6))
+
     point_numbers = list(range(random_walk.num_points))
     plt.scatter(random_walk.x_values, random_walk.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1)
 
