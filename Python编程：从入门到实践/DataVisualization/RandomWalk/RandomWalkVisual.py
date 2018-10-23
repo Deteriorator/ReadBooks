@@ -28,6 +28,10 @@ while True:
     # 突出起点和终点
     plt.scatter(0, 0, c='green', edgecolors='none', s=100)
     plt.scatter(random_walk.x_values[-1], random_walk.y_values[-1], c='red', edgecolors='none', s=100)
+
+    # 隐藏坐标轴
+    plt.axes().get_xaxis().set_visible(False)
+    plt.axes().get_yaxis().set_visible(False)
     plt.show()
 
     keep_running = input("Make another walk?(y/n)")
