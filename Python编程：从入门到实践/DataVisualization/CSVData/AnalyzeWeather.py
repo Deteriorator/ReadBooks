@@ -39,8 +39,9 @@ with open(filename) as file:
 
     # 根据数据绘制图形
     fig = plt.figure(dpi=128, figsize=(10, 6))
-    plt.plot(dates, highs, c='red')
-    plt.plot(dates, lows, c='blue')
+    plt.plot(dates, highs, c='red', alpha=0.5)
+    plt.plot(dates, lows, c='blue', alpha=0.5)
+    plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
     # 设置图形的格式
     # plt.title(u'2014年7月每日最高气温', fontsize=24)
@@ -56,4 +57,4 @@ with open(filename) as file:
     plt.tick_params(axis='both', which='major', labelsize=16)
 
     # plt.show()
-    plt.savefig('Highandlow.png', bbox_inches='tight')
+    plt.savefig('fillwithcolor.png', bbox_inches='tight')
