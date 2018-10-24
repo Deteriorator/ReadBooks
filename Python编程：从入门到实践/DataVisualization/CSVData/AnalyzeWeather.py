@@ -28,17 +28,19 @@ with open(filename) as file:
     #     print(index, column_header)
 
     # 从文件中获取最高气温
-    dates, highs = [], []
+    dates, highs, lows= [], [], []
     for row in reader:
         current_date = datetime.strptime(row[0], "%Y-%m-%d")
         dates.append(current_date)
         highs.append(int(row[1]))
+        lows.append(int(row[3]))
 
     # print(highs)
 
     # 根据数据绘制图形
     fig = plt.figure(dpi=128, figsize=(10, 6))
     plt.plot(dates, highs, c='red')
+    plt.plot(dates, lows, c='blue')
 
     # 设置图形的格式
     # plt.title(u'2014年7月每日最高气温', fontsize=24)
@@ -47,11 +49,11 @@ with open(filename) as file:
     # plt.tick_params(axis='both', which='major', labelsize=16)
 
     # 中文不行
-    plt.title(u'Daily Hhigh Temperatures-2014', fontsize=24)
+    plt.title('Daily High And Low Temperatures-2014', fontsize=24)
     plt.xlabel('', fontsize=16)
     fig.autofmt_xdate()
     plt.ylabel('Temperature (F)', fontsize=16)
     plt.tick_params(axis='both', which='major', labelsize=16)
 
     # plt.show()
-    plt.savefig('wholeyear.png', bbox_inches='tight')
+    plt.savefig('Highandlow.png', bbox_inches='tight')
