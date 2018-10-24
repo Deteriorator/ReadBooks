@@ -18,7 +18,7 @@ from matplotlib import pyplot as plt
 from datetime import datetime
 
 
-filename = 'sitka_weather_07-2014.csv'
+filename = 'sitka_weather_2014.csv'
 with open(filename) as file:
     reader = csv.reader(file)
     header_row = next(reader)
@@ -47,11 +47,11 @@ with open(filename) as file:
     # plt.tick_params(axis='both', which='major', labelsize=16)
 
     # 中文不行
-    plt.title(u'Daily Hhigh Temperatures, July 2014', fontsize=24)
+    plt.title(u'Daily Hhigh Temperatures-2014', fontsize=24)
     plt.xlabel('', fontsize=16)
     fig.autofmt_xdate()
     plt.ylabel('Temperature (F)', fontsize=16)
     plt.tick_params(axis='both', which='major', labelsize=16)
 
     # plt.show()
-    plt.savefig('2.png', bbox_inches='tight')
+    plt.savefig('wholeyear.png', bbox_inches='tight')
