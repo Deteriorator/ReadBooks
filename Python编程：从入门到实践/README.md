@@ -5,8 +5,8 @@ Python编程:从入门到实践|[美]Eric Matthes著  袁国忠译|ISBN 978-7-11
 
 ## 注意
 
-模块 pygal.i18n 不存在，更改为 pygal_maps_world 需要重新使用 pip 安装。
-
+模块 pygal.i18n 不存在，更改为 pygal_maps_world 需要重新使用 pip 安装。<br>
+`python -m pip3 install -i https://pypi.douban.com/simple pygal_maps_world`
 
 ## 项目依赖模块
 
