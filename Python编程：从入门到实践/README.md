@@ -19,5 +19,9 @@ Python编程:从入门到实践|[美]Eric Matthes著  袁国忠译|ISBN 978-7-11
     `pip install -i https://pypi.douban.com/simple matplotlib`
     2. Pygal模块<br>
     `pip install -i https://pypi.douban.com/simple pygal`
+    3. Pygal_maps_world模块<br>
+    `pip install -i https://pypi.douban.com/simple pygal_maps_world`
+    4. Requests模块<br>
+    `pip install -i https://pypi.douban.com/simple requests`
     
-3. 
+3. Web应用程序
