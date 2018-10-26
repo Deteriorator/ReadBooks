@@ -17,6 +17,7 @@ import json
 from CountryCode import get_country_code
 from pygal_maps_world.maps import World
 from pygal.style import RotateStyle
+from pygal.style import LightColorizedStyle
 
 # 将数据加载到一个列表中
 filename = 'population_data.json'
@@ -51,10 +52,11 @@ for world_code, population in whole_population.items():
 # 看看每组分别包含多少个国家
 print(len(world_population_1), len(world_population_2), len(world_population_3))
 
-world_map_style = RotateStyle('#336699')
+world_map_style = RotateStyle('#336699', base_style=LightColorizedStyle)
+# world_map_style = LightColorizedStyle
 world_map = World(style=world_map_style)
 world_map.title = 'World Population In 2010, By Country'
 world_map.add('0 - 10M', world_population_1)
 world_map.add('10M - 1BN', world_population_2)
 world_map.add('>1BN', world_population_3)
-world_map.render_to_file('threelevel_style.svg')
+world_map.render_to_file('threelevel_light_style.svg')
