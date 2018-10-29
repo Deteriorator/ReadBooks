@@ -44,4 +44,5 @@ Python编程:从入门到实践|[美]Eric Matthes著  袁国忠译|ISBN 978-7-11
         `This password is entirely numeric.`<br>
         `Bypass password validation and create user anyway? [y/N]: y`<br>
         `Superuser created successfully.`<br>
-    
+
+### 书上的Django版本太老了，新版本不懂如何操作，暂时停止学习Django
