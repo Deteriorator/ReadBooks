@@ -30,4 +30,8 @@ Python编程:从入门到实践|[美]Eric Matthes著  袁国忠译|ISBN 978-7-11
     `D:\anaconda3\envs\spider\Scripts\django-admin.exe startproject WebApplication`<br>
     `D:\anaconda3\envs\spider\python manage.py migrate`<br>
     `D:\anaconda3\envs\spider\python manage.py runserver`<br>
+    `D:\anaconda3\envs\spider\python manage.py startapp DjangoApplication`<br>
+    `D:\anaconda3\envs\spider\python manage.py makemigrations DjangoApplication`<br>
+    `D:\anaconda3\envs\spider\python manage.py migrate`
+    
     
