@@ -31,14 +31,18 @@ print('Total Repositories:', response_dict['total_count'])
 repo_dicts = response_dict['items']
 # print('Repositories Returned:', len(repo_dicts))
 
-names, stars = [], []
+names, plot_dicts = [], []
 # 研究第一个仓库
 # repo_dict = repo_dicts[0]
-print('\nSelected information about each repository:')
+# print('\nSelected information about each repository:')
 for repo_dict in repo_dicts:
     # print(key)
     names.append(repo_dict['name'])
-    stars.append(repo_dict['stargazers_count'])
+    plot_dict = {
+        'value': repo_dict['stargazers_count'],
+        'label': repo_dict['description']
+        }
+    plot_dicts.append(plot_dict)
     # print("\nSelected information about first repository:")
     # print('Name:', repo_dict['name'])
     # print('Owner:', repo_dict['owner']['login'])
@@ -68,5 +72,5 @@ chart = pygal.Bar(my_config, style=my_style)
 chart.title = 'Most-Starred Python Project On Github'
 chart.x_labels = names
 
-chart.add('', stars)
-chart.render_to_file('Python-Repos.svg')
+chart.add('', plot_dicts)
+chart.render_to_file('Python-Repos-fix.svg')
