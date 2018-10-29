@@ -25,3 +25,9 @@ Python编程:从入门到实践|[美]Eric Matthes著  袁国忠译|ISBN 978-7-11
     `pip install -i https://pypi.douban.com/simple requests`
     
 3. Web应用程序
+    1. Django模块<br>
+    `python -m pip install -i https://pypi.douban.com/simple Django`<br>
+    `D:\anaconda3\envs\spider\Scripts\django-admin.exe startproject WebApplication`<br>
+    `D:\anaconda3\envs\spider\python manage.py migrate`<br>
+    `D:\anaconda3\envs\spider\python manage.py runserver`<br>
+    
