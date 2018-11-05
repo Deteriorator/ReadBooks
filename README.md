@@ -14,7 +14,9 @@
 
 #### 《FlaskWeb开发：基于Python的Web应用开发实战》
 
-1. [基于Flask的Web应用](FlaskWeb)
+1. [基于Flask的Web应用](FlaskWeb)<br>
+之前的tag是给Flask填的，但是没想到是对整体添加的，故后续不在添加tag
+
 
 #### 《Python编程：从入门到实践》
 
@@ -52,4 +54,4 @@
         `Bypass password validation and create user anyway? [y/N]: y`<br>
         `Superuser created successfully.`<br>
 
-##### 书上的Django版本太老了，没有Django基础，新版本不懂如何操作，暂时停止学习Django
+##### 书上的Django版本太老了，没有Django基础，新版本不懂如何操作，暂时停止学习Django，先学习Flask。
