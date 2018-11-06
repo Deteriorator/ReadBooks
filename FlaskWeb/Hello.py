@@ -17,7 +17,7 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from datetime import datetime
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import Required, DataRequired
 
@@ -29,7 +29,8 @@ bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'hard to guess string'
 
 
-class NameForm(Form):
+class NameForm(FlaskForm):
+    # 新版本
     name = StringField('What is your name?', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
