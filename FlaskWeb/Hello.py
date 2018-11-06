@@ -17,17 +17,31 @@ from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from datetime import datetime
-# from flask.ext.bootstrap import Bootstrap
-# from flask.ext.moment import Moment
+from flask_wtf import Form
+from wtforms import StringField, SubmitField
+from wtforms.validators import Required, DataRequired
+
+
 app = Flask(__name__)
 moment = Moment(app)
 bootstrap = Bootstrap(app)
 
+app.config['SECRET_KEY'] = 'hard to guess string'
 
 
-@app.route('/')
+class NameForm(Form):
+    name = StringField('What is your name?', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', current_time=datetime.utcnow())
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+    return render_template('index.html', form=form, name=name)  # current_time=datetime.utcnow())
 
 
 @app.route('/user/<name>')
