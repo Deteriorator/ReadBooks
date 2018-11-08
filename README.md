@@ -15,7 +15,7 @@
 #### 《FlaskWeb开发：基于Python的Web应用开发实战》
 
 1. [基于Flask的Web应用](FlaskWeb)<br>
-之前的tag是给Flask填的，但是没想到是对整体添加的，故后续不在添加tag
+修改添加tag的方式
 
 
 #### 《Python编程：从入门到实践》
