@@ -44,8 +44,8 @@ class NameForm(FlaskForm):
 class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), unique=True)
-    users = db.relationship('User', backref='role', lazy='dynamic')
+    name = db.Column(db.String(64), nullable=False)
+    users = db.relationship('User', backref='role', lazy=True)
 
     def __repr__(self):
         return '<Role %r>' % self.name
@@ -54,8 +54,9 @@ class Role(db.Model):
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), unique=True, index=True)
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    username = db.Column(db.String(64), nullable=False, unique=True, index=True)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'), nullable=False)
+    # role = db.relationship('Role', backref=db.backref('user', lazy=True))
 
     def __repr__(self):
         return '<User %r>' % self.username
@@ -66,7 +67,7 @@ def index():
     # name = None
     form = NameForm()
     if form.validate_on_submit():
-        user = User.query.fillter_by(username=form.name.data).first()
+        user = User.query.filter_by(username=form.name.data).first()
         # old_name = session.get('name')
         # if old_name is not None and old_name != form.name.data:
         if user is None:
