@@ -15,7 +15,32 @@
 #### 《FlaskWeb开发：基于Python的Web应用开发实战》
 
 1. [基于Flask的Web应用](FlaskWeb)<br>
-修改添加tag的方式
+修改添加tag的方式<br>
+- Flask 程序的基本结构<br>
+```
+|-flasky/
+  |-app/
+    |-templates/
+    |-static/
+    |-main/
+      |-__init__.py
+      |-errors.py
+      |-forms.py
+      |-views.py
+    |-__init__.py
+    |-email.py
+    |-models.py
+  |-migrations/
+  |-tests/
+    |-__init__.py
+    |-test*.py
+  |-venv/
+  |-requirements.txt
+  |-config.py
+  |-manage.py
+```
+- 关于Requirement.txt <br>
+用过这个环境做其他项目，所以模块有点多
 
 
 #### 《Python编程：从入门到实践》
