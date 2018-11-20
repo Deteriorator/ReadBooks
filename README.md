@@ -1,6 +1,6 @@
 **代码都是在Python3.6运行**
 
-#### 《编程小白的第一本Python入门书》
+# 《编程小白的第一本Python入门书》
 * 重量单位转换 [Python 3.6版本](编程小白的第一本Python入门书/WeightConvertPy3.py)
 * 直角三角形斜边计算 [Python 3.6版本](编程小白的第一本Python入门书/HypotenusePy3.py)
 * 9X9 乘法表 [Python 3.6版本](编程小白的第一本Python入门书/MultiplicationTablePy3.py)  
@@ -12,7 +12,7 @@
 * 伪手机验证码 [Python 3.6版本](编程小白的第一本Python入门书/PhoneNumVerificationPy3.py)
 * 词频统计 [Python 3.6版本](编程小白的第一本Python入门书/WordFrequency/WordFrequencyPy3.py)
 
-#### 《FlaskWeb开发：基于Python的Web应用开发实战》
+# 《FlaskWeb开发：基于Python的Web应用开发实战》
 
 1. [基于Flask的Web应用](FlaskWeb)<br>
 修改添加tag的方式<br>
@@ -43,7 +43,7 @@
 用过这个环境做其他项目，所以模块有点多
 
 
-#### 《Python编程：从入门到实践》
+# 《Python编程：从入门到实践》
 
 1. [外星人入侵](Python编程：从入门到实践/AlienInvasion)
     1. 依赖于 Pygame 模块
