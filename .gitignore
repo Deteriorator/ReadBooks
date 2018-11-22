@@ -156,7 +156,7 @@ $RECYCLE.BIN/
 *.ncb
 bin/
 obj/
-
+Debug/
 
 
 
