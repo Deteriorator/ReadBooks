@@ -40,17 +40,17 @@ digit:
     mov bx,number 
     mov si,4                      
 show:
-    mov al,[bx+si]
-    add al,0x30
-    mov ah,0x04
-    mov [es:di],ax
-    add di,2
+    mov al,[bx+si]                ;获取数据区万位数字
+    add al,0x30                   ;将数字转换为ASCII码
+    mov ah,0x04                   ;0x04是显示属性，黑底红字，无加亮，无闪烁
+    mov [es:di],ax                ;将数字传送到显示缓冲区
+    add di,2                      ;DI 指向缓冲区的下一个单元
     dec si                        ;dec 将操作数内容减一
-    jns show
+    jns show                      ;sf符号位，jns条件转移指令，当sf为1时，不跳转，顺序执行下一条指令
          
-    mov word [es:di],0x0744
+    mov word [es:di],0x0744       ;07表示黑底白字，44是D的ASCII码
 
-    jmp near $
-
-  times 510-($-$$) db 0
-                   db 0x55,0xaa
+    jmp near $                    ;无限循环 $标记等同于标号，可看成是隐藏在当前行行首的标号
+;除去0x55和0xaa，剩余的主引导扇区(512字节)内容是510字节,$$表示当前汇编节(段)的起始汇编地址
+times 510-($-$$) db 0                
+                 db 0x55,0xaa
