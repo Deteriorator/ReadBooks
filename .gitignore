@@ -161,3 +161,9 @@ Debug/
 # 学习x86汇编
 *.bin
 
+*.ipch
+
+# VS2017
+Debug/
+.vs/
+
