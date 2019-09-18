@@ -18,5 +18,19 @@
     <ClCompile Include="001-DecToHex.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="002-DecToBin.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cmain.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="003-BaseNToDec.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

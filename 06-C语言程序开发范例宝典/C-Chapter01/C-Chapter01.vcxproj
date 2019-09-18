@@ -117,6 +117,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="001-DecToHex.c" />
+    <ClCompile Include="002-DecToBin.c" />
+    <ClCompile Include="003-BaseNToDec.c" />
+    <ClCompile Include="cmain.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

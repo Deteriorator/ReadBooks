@@ -1,43 +1,44 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-
 /*
  *实例 001 十进制转换为十六进制
  */
-int DecToBin(int x);
 
-void main()
+//void main()
+//{
+//    int i;
+//    printf("Please Input decimalism number: ");
+//    scanf("%d", &i);
+//    /*
+//     * 直接使用控制字符串
+//     * %o 八进制
+//     * %x %X 十六进制
+//     */
+//    printf("the hex number is 0x%x\n", i);
+//    printf("the oct number is %o\n", i);
+//    printf("the bin number is %d\n", DecToBin(i));
+//    getchar();
+//    getchar();
+//}
+
+void DecToHex(int x)
 {
-    int i;
-    printf("Please Input decimalism number: ");
-    scanf("%d", &i);
-    /*
-     * 直接使用控制字符串
-     * %o 八进制
-     * %x %X 十六进制
-     */
-    printf("the hex number is 0x%x\n", i);
-    printf("the oct number is %o\n", i);
-    printf("the bin number is %d\n", DecToBin(i));
-    getchar();
-    getchar();
+    printf("the hex number is 0x%x\n", x);
 }
 
 // 十进制转二进制
-long DecToBin(int x)
-{
-    int remainder, temp;    //remainder 是余数
-    long result = 0, k = 1;
-    temp = x;
-    while (temp)
-    {
-        remainder = temp % 2;
-        result = remainder * k + result;
-        k = k * 10;
-        temp = temp / 2;
-    }
-    return result;
-}
+//long DecToBin(int x)
+//{
+//    int remainder, temp;    //remainder 是余数
+//    long result = 0, k = 1;
+//    temp = x;
+//    while (temp)
+//    {
+//        remainder = temp % 2;
+//        result = remainder * k + result;
+//        k = k * 10;
+//        temp = temp / 2;
+//    }
+//    return result;
+//}
 
 
 /*
