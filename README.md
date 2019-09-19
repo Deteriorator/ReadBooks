@@ -102,6 +102,10 @@
 
 <details><summary><font color="#4183c4">《C语言程序开发范例宝典》</font></summary>
 
+- [实例 001 十进制转换为十六进制](06-C语言程序开发范例宝典\C-Chapter01\001-DecToHex.c)
+- [实例 002 十进制转换为二进制](06-C语言程序开发范例宝典\C-Chapter01\002-DecToBin.c)
+- [实例 003 n进制转换十进制](06-C语言程序开发范例宝典\C-Chapter01\003-BaseNToDec.c) (存在问题，没看懂)
+- [实例 004 以IP地址形式输出](06-C语言程序开发范例宝典\C-Chapter01\004-BinToIP.c) (存在问题)
 
 
 </details>

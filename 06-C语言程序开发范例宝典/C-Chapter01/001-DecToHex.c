@@ -1,5 +1,5 @@
-/*
- *ÊµÀı 001 Ê®½øÖÆ×ª»»ÎªÊ®Áù½øÖÆ
+ï»¿/*
+ *å®ä¾‹ 001 åè¿›åˆ¶è½¬æ¢ä¸ºåå…­è¿›åˆ¶
  */
 
 //void main()
@@ -8,9 +8,9 @@
 //    printf("Please Input decimalism number: ");
 //    scanf("%d", &i);
 //    /*
-//     * Ö±½ÓÊ¹ÓÃ¿ØÖÆ×Ö·û´®
-//     * %o °Ë½øÖÆ
-//     * %x %X Ê®Áù½øÖÆ
+//     * ç›´æ¥ä½¿ç”¨æ§åˆ¶å­—ç¬¦ä¸²
+//     * %o å…«è¿›åˆ¶
+//     * %x %X åå…­è¿›åˆ¶
 //     */
 //    printf("the hex number is 0x%x\n", i);
 //    printf("the oct number is %o\n", i);
@@ -24,10 +24,10 @@ void DecToHex(int x)
     printf("the hex number is 0x%x\n", x);
 }
 
-// Ê®½øÖÆ×ª¶ş½øÖÆ
+// åè¿›åˆ¶è½¬äºŒè¿›åˆ¶
 //long DecToBin(int x)
 //{
-//    int remainder, temp;    //remainder ÊÇÓàÊı
+//    int remainder, temp;    //remainder æ˜¯ä½™æ•°
 //    long result = 0, k = 1;
 //    temp = x;
 //    while (temp)
@@ -42,14 +42,14 @@ void DecToHex(int x)
 
 
 /*
-º¯Êı char *itoa(int value, char *string, int radix)
-   ·µ»ØÖµÀàĞÍchar
-   ²ÎÊıvalue ´ı×ª»»µÄÊı×Ö
-   ²ÎÊıstring ×ª»»ºó´æ´¢µ½stringÖĞ
-   ²ÎÊıradix ×ª»»µ½¼¸½øÖÆ
-¶¨ÒåÔÚ stdlib.h
+å‡½æ•° char *itoa(int value, char *string, int radix)
+   è¿”å›å€¼ç±»å‹char
+   å‚æ•°value å¾…è½¬æ¢çš„æ•°å­—
+   å‚æ•°string è½¬æ¢åå­˜å‚¨åˆ°stringä¸­
+   å‚æ•°radix è½¬æ¢åˆ°å‡ è¿›åˆ¶
+å®šä¹‰åœ¨ stdlib.h
 
-Ê¾Àı£º
+ç¤ºä¾‹ï¼š
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100

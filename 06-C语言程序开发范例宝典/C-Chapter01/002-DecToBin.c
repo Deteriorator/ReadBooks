@@ -1,9 +1,9 @@
-/*
- * ÊµÀı 002 Ê®½øÖÆ×ª»»Îª¶ş½øÖÆ
+ï»¿/*
+ * å®ä¾‹ 002 åè¿›åˆ¶è½¬æ¢ä¸ºäºŒè¿›åˆ¶
  */
 long DecToBin(int x)
 {
-    int remainder, temp;    //remainder ÊÇÓàÊı
+    int remainder, temp;    //remainder æ˜¯ä½™æ•°
     long result = 0, k = 1;
     temp = x;
     while (temp)
