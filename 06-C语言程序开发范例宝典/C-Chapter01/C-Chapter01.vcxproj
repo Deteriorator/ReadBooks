@@ -120,6 +120,7 @@
     <ClCompile Include="002-DecToBin.c" />
     <ClCompile Include="003-BaseNToDec.c" />
     <ClCompile Include="004-BinToIP.c" />
+    <ClCompile Include="005-ThreeNumSortByAsc.c" />
     <ClCompile Include="cmain.c" />
   </ItemGroup>
   <ItemGroup>
