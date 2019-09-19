@@ -1,18 +1,22 @@
+## 仓库所有内容
+
+<details><summary><font color="#4183c4">《编程小白的第一本Python入门书》</font></summary>
+
 **代码都是在Python3.6运行**
+- 重量单位转换 [Python 3.6版本](编程小白的第一本Python入门书/WeightConvertPy3.py)
+- 直角三角形斜边计算 [Python 3.6版本](编程小白的第一本Python入门书/HypotenusePy3.py)
+- 9X9 乘法表 [Python 3.6版本](编程小白的第一本Python入门书/MultiplicationTablePy3.py)  
+- 空文本文件创建 [Python 3.6版本](编程小白的第一本Python入门书/CreatFilesPy3.py)
+- 偶数 [Python 3.6版本](编程小白的第一本Python入门书/EvenNumberPy3.py)
+- 复利函数 [Python 3.6版本](编程小白的第一本Python入门书/CompoundPy3.py)
+- 猜大小 [Python 3.6版本](编程小白的第一本Python入门书/GuessTheSizePy3.py)
+- 赌钱小游戏 [Python 3.6版本](编程小白的第一本Python入门书/BetGamePy3.py)
+- 伪手机验证码 [Python 3.6版本](编程小白的第一本Python入门书/PhoneNumVerificationPy3.py)
+- 词频统计 [Python 3.6版本](编程小白的第一本Python入门书/WordFrequency/WordFrequencyPy3.py)
 
-# 《编程小白的第一本Python入门书》
-* 重量单位转换 [Python 3.6版本](编程小白的第一本Python入门书/WeightConvertPy3.py)
-* 直角三角形斜边计算 [Python 3.6版本](编程小白的第一本Python入门书/HypotenusePy3.py)
-* 9X9 乘法表 [Python 3.6版本](编程小白的第一本Python入门书/MultiplicationTablePy3.py)  
-* 空文本文件创建 [Python 3.6版本](编程小白的第一本Python入门书/CreatFilesPy3.py)
-* 偶数 [Python 3.6版本](编程小白的第一本Python入门书/EvenNumberPy3.py)
-* 复利函数 [Python 3.6版本](编程小白的第一本Python入门书/CompoundPy3.py)
-* 猜大小 [Python 3.6版本](编程小白的第一本Python入门书/GuessTheSizePy3.py)
-* 赌钱小游戏 [Python 3.6版本](编程小白的第一本Python入门书/BetGamePy3.py)
-* 伪手机验证码 [Python 3.6版本](编程小白的第一本Python入门书/PhoneNumVerificationPy3.py)
-* 词频统计 [Python 3.6版本](编程小白的第一本Python入门书/WordFrequency/WordFrequencyPy3.py)
+</details>
 
-# 《FlaskWeb开发：基于Python的Web应用开发实战》
+<details><summary><font color="#4183c4">《FlaskWeb开发：基于Python的Web应用开发实战》</font></summary>
 
 1. [基于Flask的Web应用](FlaskWeb)<br>
 修改添加tag的方式<br>
@@ -42,8 +46,9 @@
 - 关于Requirement.txt <br>
 用过这个环境做其他项目，所以模块有点多
 
+</details>
 
-# 《Python编程：从入门到实践》
+<details><summary><font color="#4183c4">《Python编程：从入门到实践》</font></summary>
 
 1. [外星人入侵](Python编程：从入门到实践/AlienInvasion)
     1. 依赖于 Pygame 模块
@@ -80,3 +85,24 @@
         `Superuser created successfully.`<br>
 
 ##### 书上的Django版本太老了，没有Django基础，新版本不懂如何操作，暂时停止学习Django，先学习Flask。
+
+</details>
+
+<details><summary><font color="#4183c4">《C语言程序设计（谭浩强）》</font></summary>
+
+
+
+</details>
+
+<details><summary><font color="#4183c4">《x86汇编语言.从实模式到保护模式》</font></summary>
+
+
+
+</details>
+
+<details><summary><font color="#4183c4">《C语言程序开发范例宝典》</font></summary>
+
+
+
+</details>
+
