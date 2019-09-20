@@ -107,6 +107,7 @@
 - [实例 003 n进制转换十进制](06-C语言程序开发范例宝典\C-Chapter01\003-BaseNToDec.c) (存在问题，没看懂)
 - [实例 004 以IP地址形式输出](06-C语言程序开发范例宝典\C-Chapter01\004-BinToIP.c) (存在问题)
 - [实例 005 3个数有小到大排序](06-C语言程序开发范例宝典\C-Chapter01\005-ThreeNumSortByAsc.c)
+- [实例 006 a^2 + b^2](06-C语言程序开发范例宝典\C-Chapter01\006-IfSum.c)
 
 </details>
 

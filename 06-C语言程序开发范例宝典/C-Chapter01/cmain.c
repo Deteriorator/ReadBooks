@@ -2,11 +2,11 @@
 
 int main()
 {
-    int a, b, c;
-    printf("Please Input three number: ");
+    int a, b;
+    printf("Please Input two numbers: ");
     //gets(i);
-    scanf("%d %d %d", &a, &b, &c);
-    SortByAsc(a, b, c);
+    scanf("%d %d", &a, &b);
+    printf("result is: %d", IfSum(a, b));
     getchar();
     getchar();
 }
