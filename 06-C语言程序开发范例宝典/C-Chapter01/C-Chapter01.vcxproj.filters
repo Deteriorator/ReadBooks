@@ -36,6 +36,9 @@
     <ClCompile Include="006-IfSum.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="007-IntegralMultiple.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
