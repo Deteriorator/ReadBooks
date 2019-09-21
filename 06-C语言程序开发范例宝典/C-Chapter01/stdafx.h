@@ -9,3 +9,4 @@ int BinToIP(int a[33]);
 void SortByAsc(int a, int b, int c);
 int IfSum(int a, int b);
 int IntegralMultiple(int a, int x, int y);
+int JudgeYear(int year);

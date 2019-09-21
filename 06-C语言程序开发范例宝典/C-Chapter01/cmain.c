@@ -2,18 +2,18 @@
 
 int main()
 {
-    int a, b, c, result;
-    printf("Please Input three numbers: ");
+    int year, result;
+    printf("Please Input year: ");
     //gets(i);
-    scanf("%d %d %d", &a, &b, &c);
-    result = IntegralMultiple(a, b, c);
+    scanf("%d", &year);
+    result = JudgeYear(year);
     if (result == 1)
     {
-        printf("yes");
+        printf("%d is a leap year", year);
     }
     else
     {
-        printf("No");
+        printf("%d is not a leap year", year);
     }
     getchar();
     getchar();
