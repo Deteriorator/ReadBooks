@@ -2,19 +2,11 @@
 
 int main()
 {
-    int year, result;
-    printf("Please Input year: ");
+    int line;
+    printf("Please Input line number: ");
     //gets(i);
-    scanf("%d", &year);
-    result = JudgeYear(year);
-    if (result == 1)
-    {
-        printf("%d is a leap year", year);
-    }
-    else
-    {
-        printf("%d is not a leap year", year);
-    }
+    scanf("%d", &line);
+    PrintTriangle(line);
     getchar();
     getchar();
 }

@@ -110,6 +110,12 @@
 - [实例 006 a^2 + b^2](06-C语言程序开发范例宝典\C-Chapter01\006-IfSum.c)
 - [实例 007 整倍数](06-C语言程序开发范例宝典\C-Chapter01\007-IntegralMultiple.c)
 - [实例 008 判断闰年](06-C语言程序开发范例宝典\C-Chapter01\008-JudgeLeapYear.c)
+- []()
+- []()
+- []()
+- []()
+- [实例 013 用#打印三角形](06-C语言程序开发范例宝典\C-Chapter01\013-PrintTriangle.c)
+- []()
 
 </details>
 
