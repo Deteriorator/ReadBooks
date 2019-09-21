@@ -2,11 +2,11 @@
 
 int main()
 {
-    int line;
-    printf("Please Input line number: ");
+    int n;
+    printf("Please Input n: ");
     //gets(i);
-    scanf("%d", &line);
-    PrintTriangle(line);
+    scanf("%d", &n);
+    printf("The Sum is: %f", SequenceSummation(n));
     getchar();
     getchar();
 }

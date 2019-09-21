@@ -45,6 +45,9 @@
     <ClCompile Include="013-PrintTriangle.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="018-SequenceSummation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

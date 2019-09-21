@@ -11,3 +11,4 @@ int IfSum(int a, int b);
 int IntegralMultiple(int a, int x, int y);  // 007
 int JudgeYear(int year);                    // 008
 void PrintTriangle(int line);               // 013
+double SequenceSummation(int n);            // 018

@@ -125,6 +125,7 @@
     <ClCompile Include="007-IntegralMultiple.c" />
     <ClCompile Include="008-JudgeLeapYear.c" />
     <ClCompile Include="013-PrintTriangle.c" />
+    <ClCompile Include="018-SequenceSummation.c" />
     <ClCompile Include="cmain.c" />
   </ItemGroup>
   <ItemGroup>
